@@ -1,0 +1,9 @@
+session.json
+scheduled_queue.json
+*.json
+*.csv
+*.log
+*.mp4
+*.jpg
+backups/
+akv-sysmon
