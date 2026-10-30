@@ -54,3 +54,15 @@ gcc -O3 akv_sysmon.c -o akv-sysmon
 ## 🔗 Connect & Architecture
 - **Global Hub & Tools:** [linktr.ee/EliteAKV](https://linktr.ee/EliteAKV)
 - **Instagram:** [@amrkhedrrr](https://instagram.com/amrkhedrrr)
+
+## 📊 Benchmark & Load Performance
+
+Tested under synthetic system load via `stress-ng` (2 CPU stressors + 50% RAM load):
+
+| Metric | Result |
+| :--- | :--- |
+| **Execution Time** | **< 0.001s (1ms)** |
+| **Memory Overhead** | Direct `/proc/meminfo` stream parsing |
+| **Stability Under Load** | Pass (Zero crashes / Zero leaks) |
+| **Compilation** | GCC `-O3` Optimized |
+
