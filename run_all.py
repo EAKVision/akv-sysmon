@@ -50,3 +50,11 @@ try:
     print("🤖 [Publisher Module] Initialized and synced with pipeline staging.")
 except Exception as e:
     print(f"⚠️ Publisher Warning: {e}")
+
+# Hook Optimizer Integration
+import hook_optimizer
+try:
+    optimizer = hook_optimizer.HookOptimizer()
+    optimizer.analyze_hook('staged_output/manifest_ksa.json')
+except Exception as e:
+    print(f"⚠️ Hook Optimizer Warning: {e}")

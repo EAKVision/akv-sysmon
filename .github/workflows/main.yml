@@ -1,0 +1,39 @@
+name: Elite AKV Autonomous Growth Engine
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Runs daily at 8:00 AM UTC
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Execute 23-Module Pipeline
+        env:
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        run: |
+          python3 run_all.py
+
+      - name: Commit & Push Staged Outputs
+        run: |
+          git config --global user.name "akv-bot"
+          git config --global user.email "bot@eakv.ebdaey.com"
+          git add staged_output/
+          git commit -m "chore(auto): automated daily pipeline staging and link hub generation [skip ci]" || exit 0
+          git push origin main
