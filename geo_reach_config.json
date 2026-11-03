@@ -1,0 +1,31 @@
+{
+    "profile_seo_anchors": {
+        "name_field": "AKV | Street Dance & Footwork",
+        "bio_opening_hook": "Global Street Dance & Elite Footwork Drills \u26a1",
+        "search_keywords": [
+            "street dance",
+            "footwork tutorial",
+            "dance drills",
+            "dubai dance",
+            "us street style"
+        ],
+        "category": "Dancer / Creator"
+    },
+    "target_region_tactics": {
+        "United States": {
+            "prime_window_utc": "19:00 - 23:00 UTC (1:00 PM - 5:00 PM EST)",
+            "content_signals": "English on-screen text hooks, high-bpm trending US audio spikes, high frame-rate motion."
+        },
+        "UAE & KSA (GCC Region)": {
+            "prime_window_utc": "15:00 - 18:00 UTC (7:00 PM - 10:00 PM GST/AST)",
+            "content_signals": "Clean high-production visual aesthetics, dual-language or universally understandable visual Hooks, location tagging major hubs (Dubai, Riyadh)."
+        }
+    },
+    "geo_hashtags_mix": [
+        "#footwork",
+        "#streetdance",
+        "#dancedrills",
+        "#dubaidance",
+        "#usadance"
+    ]
+}

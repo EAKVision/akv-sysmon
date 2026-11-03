@@ -1,0 +1,69 @@
+{
+    "uuids": {
+        "phone_id": "9a7c3835-0ac3-4012-b31f-93c68e5936d5",
+        "uuid": "9317aa20-a9bb-400a-9f1b-5387bf99dbea",
+        "client_session_id": "113be406-702d-4ecf-95e1-ebb8b7b86834",
+        "advertising_id": "640e8ea5-5426-464d-a009-7b6f86c144d0",
+        "android_device_id": "android-ee090c728d8ce974",
+        "request_id": "1eb062ec-fb3b-437e-ae5e-402a201c3cbe",
+        "tray_session_id": "23082124-8678-4461-9aa3-0ba3441289e4"
+    },
+    "mid": "auIupAABAAF-GRRyB_B0kdVlvxSn",
+    "ig_u_rur": "CLN",
+    "ig_www_claim": "hmac.AR07huuulB7CgWjjdx9rw3Xh18EW8HN1LwEtcWsYp61oLnGK",
+    "authorization_data": {
+        "ds_user_id": "1266358206",
+        "sessionid": "1266358206%3AXEnNbw4b48nCQq%3A16%3AAYlXedueSzojAcVLsLbzJX4_ywS2f3vSGwODB6r7tA"
+    },
+    "cookies": {
+        "csrftoken": "tBvyAu0e56NIFoXo90NkqmFIjZfhPRVY",
+        "ds_user_id": "1266358206",
+        "sessionid": "1266358206%3AXEnNbw4b48nCQq%3A16%3AAYlXedueSzojAcVLsLbzJX4_ywS2f3vSGwODB6r7tA",
+        "rur": "GTN%2C17841401626199786%2C1794595511%3A01ffeaa43021003135503fa9af55b5292af42fdaba82541092f728f51ed3090324948cab"
+    },
+    "last_login": 1793208027.8398864,
+    "device_settings": {
+        "android_version": 34,
+        "android_release": "14",
+        "dpi": "480dpi",
+        "resolution": "1344x2992",
+        "manufacturer": "Google/google",
+        "device": "husky",
+        "model": "Pixel 8 Pro",
+        "cpu": "husky",
+        "app_version": "449.0.0.52.84",
+        "version_code": "1079242191",
+        "bloks_versioning_id": "799db3e387d7a21a19c72918b8698b6cd28a1516ade363792c100ed45a0f9f0b"
+    },
+    "user_agent": "Instagram 449.0.0.52.84 Android (34/14; 480dpi; 1344x2992; Google/google; Pixel 8 Pro; husky; husky; en_US; 1079242191)",
+    "country": "US",
+    "country_code": 1,
+    "locale": "en_US",
+    "timezone_offset": -14400,
+    "timezone_name": "GMT-04:00",
+    "push_disabled": true,
+    "request_timeout": 1,
+    "public_request_retries_count": 3,
+    "public_request_retries_timeout": 2,
+    "session_retry_total": 3,
+    "session_retry_backoff_factor": 2,
+    "session_retry_statuses": [
+        429,
+        500,
+        502,
+        503,
+        504
+    ],
+    "public_transport": "requests",
+    "public_user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15",
+    "public_graphql_user_agent": "Instagram 273.0.0.16.70 (iPhone15,2; iOS 17_5_1; en_US; en-US; scale=3.00; 1290x2796; 470085518)",
+    "private_transport": "curl",
+    "public_transport_impersonate": "chrome136",
+    "tls_verify": true,
+    "usdid": {
+        "usdid": "8d7fb38f-5cf3-4b50-87c1-b9758c8fb1c2",
+        "kid": "ex_Ttzh9xniYFzVofaSYyusokYEIzNnYNpbZMGVFSIk",
+        "private_key": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgU7LnaXjeE7t+0qLm\n1DsagC/8HmFjr5a9CtHZZVfhOTqhRANCAATCkl64cvPcHhIXXLHCCagLzMdW237f\nebB6U07ulR26NDFHEVKe/4eLO53cZC/LRpdJGI33qBsw6/QQ4OqHWIpA\n-----END PRIVATE KEY-----",
+        "registered": true
+    }
+}

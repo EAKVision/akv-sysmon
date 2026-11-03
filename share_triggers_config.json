@@ -1,0 +1,18 @@
+{
+    "pattern_interrupt_hooks": [
+        "Send this to someone who needs to hear this today.",
+        "Tag a teammate who needs to fix this drill execution.",
+        "Forward this to your training partner right now."
+    ],
+    "caption_share_callouts": [
+        "\ud83d\udca1 Pro Tip: Bookmark & share this with your circle to keep each other accountable.",
+        "\ud83d\udd25 If this mindset resonated, send it to someone pushing for the next level."
+    ],
+    "hashtag_architecture_5tag_limit": [
+        "#ElitePerformance",
+        "#MindsetAndDiscipline",
+        "#HighMotionDrills",
+        "#AmrKhedr",
+        "#EliteAKV"
+    ]
+}

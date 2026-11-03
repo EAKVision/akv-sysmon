@@ -1,0 +1,22 @@
+{
+    "target_regions": [
+        "United States",
+        "Western Europe",
+        "Global English-Speaking Markets"
+    ],
+    "retention_tactics": [
+        "Pattern Interrupt at Frame 0:00 (Zero lead-in silence)",
+        "Fast-paced visual cadence (Camera movement every 1.8 seconds)",
+        "Localized on-screen text hooks for silent scrollers"
+    ],
+    "optimal_posting_windows_utc": [
+        "12:00 PM UTC (Morning US East Coast / Evening Europe)",
+        "19:00 PM UTC (Peak US Afternoon / West Coast commute)",
+        "23:00 PM UTC (Late night global surge)"
+    ],
+    "algorithm_boosters": [
+        "60fps high-bitrate render profile (H.264 MP4)",
+        "Native audio pairing with trending rhythmic spikes",
+        "Broad yet niche-focused hashtag clustering"
+    ]
+}

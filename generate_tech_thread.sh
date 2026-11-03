@@ -1,0 +1,12 @@
+#!/bin/bash
+echo "⚡ [ELITE AKV] Generating Technical Threads Draft..."
+echo "--------------------------------------------------------"
+echo "🧵 THREAD POST 1/3:"
+echo "Building a 3D raycasting engine from scratch in C (cub3D) taught me one major lesson: abstractions make you lazy, but low-level memory management builds absolute discipline."
+echo ""
+echo "🧵 THREAD POST 2/3:"
+echo "When you have to handle every pixel, ray intersection, and texture mapping manually—with zero memory leaks under Valgrind—there is nowhere to hide sloppy code."
+echo ""
+echo "🧵 THREAD POST 3/3:"
+echo "Same mindset applies outside of code. Train hard, write clean code, eliminate the noise. What project are you obsessing over right now?"
+echo "--------------------------------------------------------"

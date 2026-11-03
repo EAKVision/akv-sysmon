@@ -1,0 +1,59 @@
+name: AKV Ecosystem CI/CD & Build Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up GCC & Build Environment
+      run: |
+        sudo apt-get update
+        gcc --version
+
+    - name: Compile All AKV C Binaries with Maximum Optimization
+      run: |
+        echo "[+] Compiling akv-dashboard..."
+        gcc -O3 akv-dashboard.c -o akv-dashboard
+        
+        echo "[+] Compiling akv-chart..."
+        gcc -O3 akv-chart.c -o akv-chart
+        
+        echo "[+] Compiling akv-sysmon..."
+        gcc -O3 akv-sysmon.c -o akv-sysmon
+        
+        echo "[+] Compiling akv-netstat..."
+        gcc -O3 akv-netstat.c -o akv-netstat
+        
+        echo "[+] Compiling akv-top..."
+        gcc -O3 akv-top.c -o akv-top
+        
+        echo "[+] Compiling akv-memprof..."
+        gcc -O3 akv-memprof.c -o akv-memprof
+
+        echo "[+] Compiling akv-watchdog..."
+        gcc -O3 akv-watchdog.c -o akv-watchdog
+        
+        echo "✅ [SUCCESS]: All bare-metal C modules compiled successfully."
+
+    - name: Run Smoke Tests & Verification
+      run: |
+        echo "[+] Executing memory profiling audit..."
+        ./akv-memprof
+
+        echo "[+] Executing watchdog daemon test..."
+        ./akv-watchdog
+        
+        echo "[+] Compiling daily briefing report..."
+        chmod +x akv-reporter.sh
+        ./akv-reporter.sh
+        
+        echo "✅ [SUCCESS]: All ecosystem smoke tests passed."

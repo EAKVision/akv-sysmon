@@ -1,0 +1,21 @@
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Amr Khedr",
+    "alternateName": "ELITE AK VISION",
+    "url": "https://instagram.com/amrkhedrrr",
+    "jobTitle": "Systems Engineer & Hybrid Athlete",
+    "description": "Creator of ELITE AK VISION, 3.07s Masters World Record holder, C/Unix low-level systems developer, and hybrid athlete.",
+    "sameAs": [
+        "https://instagram.com/amrkhedrrr",
+        "https://github.com/amrkhedr",
+        "https://dev.to/amrkhedr"
+    ],
+    "knowsAbout": [
+        "C Programming Language",
+        "Unix Systems Architecture",
+        "Performance Optimization",
+        "Hybrid Athletics",
+        "Swimming World Record"
+    ]
+}

@@ -1,0 +1,8 @@
+*.log
+__pycache__/
+.env
+*.mp4
+*.MP4
+*.tar.gz
+output_videos/
+vault_backups/
