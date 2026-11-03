@@ -1,48 +1,47 @@
+import time
 import os
-import sys
 from instagrapi import Client
 
-USERNAME = "amrkhedrrr"
-PASSWORD = "vR8#qZ2mT9@Kx5$Lp4^Nw7&cH3*Fy6Js8EAKV"  # Replace with actual password
-
 cl = Client()
+session_file = "session.json"
 
-if os.path.exists("session.json"):
-    cl.load_settings("session.json")
-    cl.login(USERNAME, PASSWORD)
-else:
-    print("❌ No session found. Run upload_reel.py first to authenticate.")
-    sys.exit(1)
+if not os.path.exists(session_file):
+    print("Error: session.json not found! Run python3 set_session.py first.")
+    exit(1)
 
-print("⚡ ======================================================== ⚡")
-print("        ELITE AKV ORGANIC REEL BOOST ENGINE (FREE)         ")
-print("⚡ ======================================================== ⚡\n")
+print("Loading saved session...")
+cl.load_settings(session_file)
 
-media_id = input("Enter your Reel Media ID (or URL): ").strip()
+# Target Reel Boost
+target_url = "https://www.instagram.com/reel/DfSE91eKy_S/?rpxt=NWZ0cDZocjU4bXdu"
+media_pk = cl.media_pk_from_url(target_url)
 
-# Extract numeric PK if URL is provided
-if "instagram.com" in media_id:
-    media_id = cl.media_pk_from_url(media_id)
+print(f"Target Media PK: {media_pk}")
 
-print(f"\n🚀 Running organic boost actions for Media ID: {media_id}...")
+# 1. Simulate natural watch time (pauses briefly before interacting)
+print("Simulating watch duration...")
+time.sleep(3)
 
-try:
-    # Action 1: Share Reel to your Story
-    cl.media_share_to_story(media_id)
-    print("1️⃣ [SUCCESS] Shared Reel to your IG Story.")
+# 2. Send Like
+cl.media_like(media_pk)
+print("✓ Sent Like")
 
-    # Action 2: Add high-engagement call-to-action comment
-    cta_text = "Zero memory leaks in C. Zero excuses in training. ⚡ What's your current stack?"
-    cl.media_comment(media_id, cta_text)
-    print("2️⃣ [SUCCESS] Posted high-contrast CTA comment.")
+# 3. Save Post (High algorithmic weight for reach)
+cl.media_save(media_pk)
+print("✓ Sent Save")
 
-    # Action 3: Pin Reel to profile grid
-    cl.clip_pin(media_id)
-    print("3️⃣ [SUCCESS] Pinned Reel to your profile grid.")
+# 4. Post an engaging comment
+cl.media_comment(media_pk, "🔥 Absolute game changer! Let's go.")
+print("✓ Posted Comment")
 
-    print("\n🔥 Organic boost sequence completed with 0 ad spend!")
+print("All maximum-reach signals successfully sent to your Reel!")
 
-except Exception as e:
-    print(f"\n❌ Boost error: {e}")
 
-print("⚡ ======================================================== ⚡")
+
+
+
+
+
+
+
+
