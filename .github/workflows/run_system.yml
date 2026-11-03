@@ -19,12 +19,15 @@ jobs:
 
       - name: Install Dependencies
         run: |
+          sudo apt-get update
           sudo apt-get install -y ffmpeg
-          pip install -r requirements.txt || true
+          python3 -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Execute System Engine
         env:
           INSTAGRAM_SESSION: ${{ secrets.INSTAGRAM_SESSION }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: |
           echo "$INSTAGRAM_SESSION" > session.json
           python3 run_all.py
