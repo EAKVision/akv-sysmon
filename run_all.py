@@ -35,3 +35,10 @@ def execute_pipeline():
 if __name__ == "__main__":
     bio_compliance.generate_bio_manifest()
     execute_pipeline()
+
+# Bio Links Generator Integration
+import bio_links_generator
+try:
+    bio_links_generator.build_links_page()
+except Exception as e:
+    print(f"⚠️ Bio Links Generator Warning: {e}")
