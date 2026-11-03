@@ -1,3 +1,4 @@
+cat << 'EOF' > media_ingest.py
 import os
 import json
 import urllib.request
@@ -48,3 +49,4 @@ def download_broll_video(region):
                     print("✅ Download complete.")
     except Exception as e:
         print(f"⚠️ Error downloading video: {e}")
+EOF
