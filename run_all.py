@@ -1,16 +1,22 @@
 import os
 import sys
 from region_hooks import get_region_hook
+from analytics_loop import get_prioritized_region, update_scores
 
 def execute_pipeline():
     print("🚀 Starting Elite AKV 23-Module System Execution...\n")
     
-    # 1. Target Region Rotation / Metadata Generation
-    target_regions = ["UAE", "KSA", "US"]
-    print("--- [Module 01-03] Regional Hook & Metadata Tuning ---")
-    for region in target_regions:
-        hook = get_region_hook(region)
-        print(f"  • Generated [{region}] Hook: \"{hook}\"")
+    # 1. Analytics Feedback Loop Integration
+    print("--- [Module 01-03] Analytics Feedback & Regional Weighting ---")
+    priority_region, stats = get_prioritized_region()
+    print(f"  • Primary Target Region: {priority_region} (Weight: {stats['weight']})")
+    
+    hook = get_region_hook(priority_region)
+    print(f"  • Selected Hook Template: \"{hook}\"")
+    
+    # Simulate automated engagement score logging for current cycle
+    simulated_score = round(75.0 + (stats['weight'] * 10), 1)
+    update_scores(priority_region, simulated_score)
     
     print("\n--- [Module 04-23] Core Automated Engine ---")
     print("  • Processing content matrices...")
