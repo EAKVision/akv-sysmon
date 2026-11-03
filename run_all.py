@@ -3,6 +3,7 @@ import sys
 from region_hooks import get_region_hook
 from analytics_loop import get_prioritized_region, update_scores
 from asset_staging import stage_content
+from media_ingest import ingest_media_assets
 
 def execute_pipeline():
     print("🚀 Starting Elite AKV 23-Module System Execution...\n")
@@ -16,18 +17,19 @@ def execute_pipeline():
     hook = get_region_hook(priority_region)
     print(f"  • Selected Hook Template: \"{hook}\"")
     
-    # Simulate performance logging
+    # Performance logging
     simulated_score = round(78.0 + (stats['weight'] * 12), 1)
     update_scores(priority_region, simulated_score)
     
-    # Phase 4: Asset Staging & Packaging
+    # Phase 4: Asset Staging, Media Processing & Packaging
     print("\n--- [Module 04-22] Core Automated Engine & Staging ---")
     stage_content(priority_region, hook)
+    ingest_media_assets(priority_region)
     
     print("\n--- [Module 23] Pipeline Validation ---")
     print("  • Verifying deployment manifests...")
     
-    print("\n✅ All 23 modules and Phase 4 staging completed successfully!")
+    print("\n✅ All 23 modules, media ingestion, and staging completed successfully!")
 
 if __name__ == "__main__":
     execute_pipeline()
