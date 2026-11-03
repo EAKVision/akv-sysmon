@@ -58,3 +58,15 @@ try:
     optimizer.analyze_hook('staged_output/manifest_ksa.json')
 except Exception as e:
     print(f"⚠️ Hook Optimizer Warning: {e}")
+
+# Trend Radar & Cultural Adapter Integration
+import trend_radar
+import cultural_adapter
+try:
+    radar = trend_radar.TrendRadar()
+    trend = radar.scan_velocity_trends("US")
+    
+    adapter = cultural_adapter.CulturalAdapter()
+    adapter.adapt_caption("Elite execution is a habit.", "US")
+except Exception as e:
+    print(f"⚠️ Advanced Modules Warning: {e}")
