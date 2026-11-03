@@ -1,3 +1,4 @@
+import bio_compliance
 import os
 import sys
 from region_hooks import get_region_hook
@@ -32,4 +33,5 @@ def execute_pipeline():
     print("\n✅ All 23 modules, media ingestion, and staging completed successfully!")
 
 if __name__ == "__main__":
+    bio_compliance.generate_bio_manifest()
     execute_pipeline()
