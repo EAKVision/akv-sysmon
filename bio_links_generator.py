@@ -1,66 +1,43 @@
 import os
 
-def build_links_page():
-    links = [
-        {"title": "🌐 Official Website", "url": "https://eakv.ebdaey.com/main"},
-        {"title": "📺 YouTube Channel", "url": "https://youtube.com/@yourchannel"},
-        {"title": "📩 Business Inquiries", "url": "mailto:contact@ebdaey.com"}
-    ]
+class BioLinksGenerator:
+    def __init__(self):
+        # Target path matching your domain subfolder: /p/aagtatkuav
+        self.output_dir = "staged_output/p/aagtatkuav"
+        os.makedirs(self.output_dir, exist_ok=True)
+        self.output_file = os.path.join(self.output_dir, "index.html")
 
-    link_buttons = "\n".join([
-        f'    <a href="{link["url"]}" class="link-btn">{link["title"]}</a>'
-        for link in links
-    ])
-
-    html_content = f"""<!DOCTYPE html>
+    def generate_hub(self):
+        html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amr Khedr | Elite AKV</title>
-  <style>
-    body {{
-      background-color: #0d0d0d;
-      color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-      margin: 0;
-      min-height: 100vh;
-    }}
-    h1 {{ font-size: 1.25rem; margin: 0 0 4px 0; font-weight: 700; }}
-    p {{ font-size: 0.9rem; color: #8e8e93; margin: 0 0 24px 0; }}
-    .links-container {{ width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 14px; }}
-    .link-btn {{
-      background: #1c1c1e;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 16px 20px;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: 600;
-      font-size: 0.95rem;
-      border: 1px solid #2c2c2e;
-      transition: background 0.2s ease, transform 0.1s ease;
-    }}
-    .link-btn:hover {{ background: #2c2c2e; transform: translateY(-1px); }}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amr Khedr (Elite AKV) | Hub</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0b0f19; color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 20px; }
+        .card { background: #161f33; border: 1px solid #233252; padding: 30px; border-radius: 16px; width: 100%; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        h1 { margin-bottom: 5px; font-size: 1.6rem; }
+        p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 25px; }
+        .btn { display: block; background: #2563eb; color: #fff; text-decoration: none; padding: 14px 20px; border-radius: 10px; margin-bottom: 12px; font-weight: 600; transition: background 0.2s; }
+        .btn:hover { background: #1d4ed8; }
+    </style>
 </head>
 <body>
-  <h1>Amr Khedr</h1>
-  <p>Elite Performance Content | US · UAE · KSA</p>
-  <div class="links-container">
-{link_buttons}
-  </div>
+    <div class="card">
+        <h1>Amr Khedr (Elite AKV)</h1>
+        <p>Global Systems • High Performance • Scaling</p>
+        <a href="https://instagram.com/amrkhedrrr" class="btn">Instagram Profile</a>
+        <a href="https://github.com/EAKVision" class="btn">GitHub Core Repos</a>
+        <a href="mailto:contact@eakv.ebdaey.com" class="btn">Direct Contact / Inquiries</a>
+    </div>
 </body>
 </html>"""
-
-    os.makedirs('staged_output', exist_ok=True)
-    with open('staged_output/links.html', 'w') as f:
-        f.write(html_content)
-    print('✅ [Bio Links] Generated fresh links.html in staged_output/')
+        with open(self.output_file, 'w') as f:
+            f.write(html_content)
+        print(f"✅ Generated bio link landing page at: {self.output_file}")
+        return self.output_file
 
 if __name__ == '__main__':
-    build_links_page()
+    generator = BioLinksGenerator()
+    generator.generate_hub()
