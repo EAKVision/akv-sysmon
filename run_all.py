@@ -42,3 +42,11 @@ try:
     bio_links_generator.build_links_page()
 except Exception as e:
     print(f"⚠️ Bio Links Generator Warning: {e}")
+
+# Meta Auto-Publisher Integration
+import meta_publisher
+try:
+    publisher = meta_publisher.MetaAutoPublisher()
+    print("🤖 [Publisher Module] Initialized and synced with pipeline staging.")
+except Exception as e:
+    print(f"⚠️ Publisher Warning: {e}")
