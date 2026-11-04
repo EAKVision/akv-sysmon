@@ -32,4 +32,12 @@ try:
 except Exception as e:
     print(f"⚠️ [Module 25] Publisher dispatch failed: {e}")
 
+
+print("\n🎯 [Module 26] Executing Automated Revenue & Funnel Engine...")
+try:
+    import funnel_engine
+    funnel_engine.generate_funnel_manifest()
+except Exception as e:
+    print(f"⚠️ [Module 26] Funnel generation failed: {e}")
+
 print("\n⚡ [Master Pipeline] All 25 advanced modules fully synchronized.")
