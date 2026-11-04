@@ -85,3 +85,11 @@ try:
     print("⚡ [Master Pipeline] All advanced systems fully synchronized.")
 except Exception as e:
     print(f"⚠️ Integration Warning: {e}")
+
+# --- Module 24: Automated Video Render Engine ---
+try:
+import video_render_engine
+print("\n🎬 [Module 24] Executing FFmpeg 9:16 Video Render Engine...")
+video_render_engine.render_all_staged()
+except Exception as e:
+print(f"⚠️ [Module 24] Video rendering failed: {e}")
