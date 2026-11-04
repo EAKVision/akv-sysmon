@@ -6,3 +6,4 @@ __pycache__/
 *.tar.gz
 output_videos/
 vault_backups/
+.env
