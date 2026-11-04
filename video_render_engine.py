@@ -55,7 +55,6 @@ def render_all_staged():
     manifests = glob.glob("staged_output/manifest_*.json")
     for m in manifests:
         render_manifest_video(m)
-    print("✨ [Video Engine] All staged assets upgraded with AI Voiceovers and dynamic rendering!")
 
 if __name__ == "__main__":
     render_all_staged()
