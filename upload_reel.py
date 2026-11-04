@@ -36,13 +36,11 @@ def publish_all_rendered():
     viral_caption = "Automation is the ultimate leverage. Stop trading time for output. 🚀 #Automation #TechLife #ArtificialIntelligence #Coding #Productivity"
     
     for v in videos:
-        print("
-📡 Broadcasting viral asset: " + v)
+        print(f"\n📡 Broadcasting viral asset: {v}")
         upload_tiktok(v, viral_caption)
         upload_instagram(v, viral_caption)
         upload_youtube_short(v, "Autonomous Systems Engineering #Shorts", viral_caption)
 
 if __name__ == "__main__":
     publish_all_rendered()
-    print("
-🔥 [Publisher Module] Live broadcast simulation completed successfully.")
+    print("\n🔥 [Publisher Module] Live broadcast simulation completed successfully.")
