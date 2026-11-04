@@ -40,4 +40,12 @@ try:
 except Exception as e:
     print(f"⚠️ [Module 26] Funnel generation failed: {e}")
 
+
+print("\n📊 [Module 27] Executing Advanced Analytics Feedback & Closed-Loop Engine...")
+try:
+    import analytics_feedback_engine
+    analytics_feedback_engine.fetch_platform_metrics()
+except Exception as e:
+    print(f"⚠️ [Module 27] Analytics feedback failed: {e}")
+
 print("\n⚡ [Master Pipeline] All 25 advanced modules fully synchronized.")
