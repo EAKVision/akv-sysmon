@@ -31,3 +31,11 @@ except Exception as e:
     print(f"⚠ [Module 24] Video rendering failed: {e}")
 
 print("\n [Master Pipeline] All 24 advanced modules fully synchronized.")
+
+# --- Module 25: Direct API Social Publisher ---
+print("\n📡 [Module 25] Executing Autonomous Social Media Broadcaster...")
+try:
+import upload_reel
+upload_reel.publish_all_rendered()
+except Exception as e:
+print(f"⚠️ [Module 25] Publisher dispatch failed: {e}")
