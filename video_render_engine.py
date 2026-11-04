@@ -14,7 +14,7 @@ def render_manifest_video(manifest_path, output_dir="staged_output/rendered_vide
     if not os.path.exists(manifest_path):
         return None
 
-    with open(manifest_path, 'r') as f:
+    with open(manifest_path, "r") as f:
         data = json.load(f)
 
     region = data.get("region", "GLOBAL")
@@ -26,7 +26,7 @@ def render_manifest_video(manifest_path, output_dir="staged_output/rendered_vide
     audio_path = "temp_voice.mp3"
     asyncio.run(generate_voiceover(hook_text, audio_path))
 
-    print(f"🎬 [Video Engine] Rendering high-motion 9:16 vertical video with AI voice overlay...")
+    print("🎬 [Video Engine] Rendering high-motion 9:16 vertical video with AI voice overlay...")
 
     ffmpeg_cmd = [
         "ffmpeg", "-y",
@@ -55,6 +55,7 @@ def render_all_staged():
     manifests = glob.glob("staged_output/manifest_*.json")
     for m in manifests:
         render_manifest_video(m)
+    print("✨ [Video Engine] All staged assets upgraded with AI Voiceovers and dynamic rendering!")
 
 if __name__ == "__main__":
     render_all_staged()
