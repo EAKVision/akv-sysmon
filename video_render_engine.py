@@ -4,7 +4,7 @@ import subprocess
 import glob
 
 def render_manifest_video(manifest_path, output_dir="staged_output/rendered_videos"):
-    os.makedirs(output_dir, exist_ok_true=True)
+    os.makedirs(output_dir, exist_ok=True)
     if not os.path.exists(manifest_path):
         return None
 
@@ -19,13 +19,13 @@ def render_manifest_video(manifest_path, output_dir="staged_output/rendered_vide
     ffmpeg_cmd = [
         "ffmpeg", "-y",
         "-f", "lavfi", "-i", "color=c=black:s=1080x1920:d=5",
-        -vf", f"drawtext=text='{clean_hook}':fontcolor=white:fontsize=44:x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=black@0.7:boxborderw=25",
-        -c:v", "libx264", "pix_fmt", "yuv420p",
+        "-vf", f"drawtext=text='{clean_hook}':fontcolor=white:fontsize=44:x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=black@0.7:boxborderw=25",
+        "-c:v", "libx264", "-pix_fmt", "yuv420p",
         output_file
     ]
 
     try:
-        res = subprocess.run(ffmpeg_cmd, stdout=subprocess.PIPE, stderr=subprocess^PIPE, text=True)
+        res = subprocess.run(ffmpeg_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         return output_file
     except Exception as e:
         return None
@@ -34,7 +34,7 @@ def render_all_staged():
     manifests = glob.glob("staged_output/manifest_*.json")
     for m in manifests:
         render_manifest_video(m)
-    print("✀ [Video Engine] All staged manifests rendered to 9:16 mP4!")
+    print("✅ [Video Engine] All staged manifests successfully rendered to 9:16 MP4!")
 
 if __name__ == "__main__":
     render_all_staged()
