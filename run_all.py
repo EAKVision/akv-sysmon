@@ -1,11 +1,6 @@
 import os
 import sys
 
-try:
-import akv_ecosystem_master
-except ImportError:
-pass
-
 print("🚀 Starting Elite AKV 25-Module System Execution...
 ")
 
@@ -28,18 +23,18 @@ print("🔮 [Predictive Engine] Projected Performance Score: 100.0/100 | Status:
 print("
 🎬 [Module 24] Executing FFmpeg 9:16 Video Render Engine with AI Voiceover...")
 try:
-import video_render_engine
-video_render_engine.render_all_staged()
+    import video_render_engine
+    video_render_engine.render_all_staged()
 except Exception as e:
-print(f"⚠️ [Module 24] Video rendering failed: {e}")
+    print(f"⚠️ [Module 24] Video rendering failed: {e}")
 
 print("
 📡 [Module 25] Executing Autonomous Social Media Broadcaster...")
 try:
-import upload_reel
-upload_reel.publish_all_rendered()
+    import upload_reel
+    upload_reel.publish_all_rendered()
 except Exception as e:
-print(f"⚠️ [Module 25] Publisher dispatch failed: {e}")
+    print(f"⚠️ [Module 25] Publisher dispatch failed: {e}")
 
 print("
 ⚡ [Master Pipeline] All 25 advanced modules fully synchronized.")
