@@ -28,11 +28,12 @@ def render_manifest_video(manifest_path, output_dir="staged_output/rendered_vide
 
     print(f"🎬 [Video Engine] Rendering high-motion 9:16 vertical video with AI voice overlay...")
 
+    # Fixed FFmpeg drawtext parameters (removed unsupported bold=1)
     ffmpeg_cmd = [
         "ffmpeg", "-y",
         "-f", "lavfi", "-i", "color=c=0x0f172a:s=1080x1920:d=6",
         "-i", audio_path,
-        "-vf", f"drawtext=text='{clean_hook}':fontcolor=white:fontsize=52:bold=1:x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=black@0.8:boxborderw=30",
+        "-vf", f"drawtext=text='{clean_hook}':fontcolor=white:fontsize=52:x=(w-text_w)/2:y=(h-text_h)/2:box=1:boxcolor=black@0.8:boxborderw=30",
         "-c:v", "libx264", "-c:a", "aac", "-pix_fmt", "yuv420p",
         "-shortest", output_file
     ]
