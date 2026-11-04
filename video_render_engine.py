@@ -28,7 +28,6 @@ def render_manifest_video(manifest_path, output_dir="staged_output/rendered_vide
 
     print(f"🎬 [Video Engine] Rendering high-motion 9:16 vertical video with AI voice overlay...")
 
-    # Fixed FFmpeg drawtext parameters (removed unsupported bold=1)
     ffmpeg_cmd = [
         "ffmpeg", "-y",
         "-f", "lavfi", "-i", "color=c=0x0f172a:s=1080x1920:d=6",
