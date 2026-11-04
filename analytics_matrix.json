@@ -1,17 +1,17 @@
 {
   "UAE": {
-    "weight": 1.9,
-    "total_runs": 2,
-    "avg_engagement": 89.5
+    "weight": 1.95,
+    "total_runs": 4,
+    "avg_engagement": 95.25
   },
   "KSA": {
-    "weight": 1.92,
-    "total_runs": 1,
-    "avg_engagement": 92.0
+    "weight": 2.0,
+    "total_runs": 7,
+    "avg_engagement": 100.31
   },
   "US": {
-    "weight": 1.78,
-    "total_runs": 1,
-    "avg_engagement": 78.0
+    "weight": 1.96,
+    "total_runs": 5,
+    "avg_engagement": 96.14
   }
 }

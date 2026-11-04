@@ -1,27 +1,22 @@
 {
     "uuids": {
-        "phone_id": "2e41f57f-8b0c-4c37-b51e-c4588ad82235",
-        "uuid": "515acdac-072a-4b8a-a742-9fada01d79a3",
-        "client_session_id": "4ba2a629-5fb6-46ee-8827-fe37acaee698",
-        "advertising_id": "1dfe0041-c9fc-4ffa-ae3a-420dd2e08c1e",
-        "android_device_id": "android-71d955a9e9d5efe6",
-        "request_id": "c9f39983-163b-480d-a0a2-bfaec826c295",
-        "tray_session_id": "82b787e4-b874-47fc-8c73-c9dc0cf55822"
+        "phone_id": "8287043c-a406-463a-b132-d2e610982722",
+        "uuid": "19000b2c-d0d4-42d8-8440-e534cd453389",
+        "client_session_id": "1e7ff93c-2fdd-4b7b-89c7-c88cae709647",
+        "advertising_id": "733dc1e5-d270-42f1-8728-7f79f36f9940",
+        "android_device_id": "android-a51c6e4ff7a22b4b",
+        "request_id": "a176029e-5538-4b69-9fca-b3f86fef67a8",
+        "tray_session_id": "9b9d2cbb-cfba-48f0-90f1-a3a51b50cb7f"
     },
-    "mid": "aucJgAABAAF-Ev-ml2pIQcoFH-H0",
-    "ig_u_rur": "RVA",
-    "ig_www_claim": "hmac.AR07huuulB7CgWjjdx9rw3Xh18EW8HN1LwEtcWsYp61oLsMs",
+    "mid": null,
+    "ig_u_rur": null,
+    "ig_www_claim": null,
     "authorization_data": {
-        "ds_user_id": "1266358206",
-        "sessionid": "1266358206%3AaRh8LIeBNCmPjX%3A17%3AAYlumwRCUDoZYtPGEvxBEuM3IN-MJLVoSpdmyViEMw"
+        "sessionid": "1266358206:fLo5ZH87aNPulC:6:AYI1x-mNgRg60HJvIE8DWXgG4YAPFBvPh1TvYt9QSg",
+        "ds_user_id": "1266358206"
     },
-    "cookies": {
-        "csrftoken": "45cDzFIPD0Sm24mXaN27j1rMaCIMJTMr",
-        "ds_user_id": "1266358206",
-        "sessionid": "1266358206%3AaRh8LIeBNCmPjX%3A17%3AAYlumwRCUDoZYtPGEvxBEuM3IN-MJLVoSpdmyViEMw",
-        "rur": "GTN%2C17841401626199786%2C1794735843%3A01ff10bf8e7e499742a5b292e80a72a8695683786ee317aaed95dbaeb31ee38ed2ddfff3"
-    },
-    "last_login": 1793526184.4456198,
+    "cookies": {},
+    "last_login": null,
     "device_settings": {
         "android_version": 34,
         "android_release": "14",
@@ -59,11 +54,5 @@
     "public_graphql_user_agent": "Instagram 273.0.0.16.70 (iPhone15,2; iOS 17_5_1; en_US; en-US; scale=3.00; 1290x2796; 470085518)",
     "private_transport": "curl",
     "public_transport_impersonate": "chrome136",
-    "tls_verify": true,
-    "usdid": {
-        "usdid": "3a0f9851-5505-47e7-afb3-0efff3c3db52",
-        "kid": "3DrJs__axZ_YuF_XHUIirwoJgxjHZOpBOMwx_cO0p_0",
-        "private_key": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgFgy3o0Dz+GpMhzzK\navInq2DKfCXbkv6EFKKbX6HWxGehRANCAATWkgYBGuYmFx0PYRehiD3MOisLmTzH\nhIlOf/56XDgrHqKl8PSKRLffS53PRuEYYbaIYWpFrQ3wMa9va82jGwX3\n-----END PRIVATE KEY-----",
-        "registered": true
-    }
+    "tls_verify": true
 }
